@@ -8,7 +8,8 @@
 <meta name="theme-color" content="#0b0b0b">
 <meta property="og:title" content="Fred &amp; Rods | South African stickers">
 <meta property="og:description" content="Stickers with a very South African sense of humour.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%87%BF%F0%9F%87%A6%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800;1,900&family=Barlow:wght@500;600&display=swap" rel="stylesheet">
@@ -34,7 +35,10 @@ h1,h2,.display{font-family:var(--display);font-style:italic;font-weight:900;marg
 h1{font-size:clamp(3rem,15vw,5rem);letter-spacing:-.01em;transform:rotate(-2deg);margin:6px 0 18px}
 h1 span{display:block;color:#fff} h1 span+span{color:var(--yellow)}
 h1::after{content:"";display:block;width:70%;height:9px;background:var(--red);transform:skewX(-30deg);margin-top:10px}
-.lede{font-size:1.2rem;max-width:30ch;margin:0 0 30px}
+.logo{display:block;width:min(320px,80%);height:auto;margin:0 0 14px;transform:rotate(-2deg)}
+.intro{display:flex;align-items:center;gap:16px;margin:0 0 30px}
+.avatar{flex:none;width:72px;height:72px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 2px var(--cut)}
+.lede{font-size:1.2rem;max-width:30ch;margin:0}
 h2{font-size:2rem;margin-bottom:14px}
 section{margin-top:38px}
 section[hidden]{display:none}
@@ -89,8 +93,12 @@ footer a{color:#fff}
 <div class="flag" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
 
 <main>
+  <img class="logo" src="img/logo.png" alt="Fred &amp; Rods" width="900" height="220">
   <h1><span>Thanks for</span><span>sticking with us</span></h1>
-  <p class="lede" id="lede"></p>
+  <div class="intro">
+    <img class="avatar" src="img/icon.png" alt="" width="72" height="72">
+    <p class="lede" id="lede"></p>
+  </div>
 
   <div class="stack" id="links"></div>
 
