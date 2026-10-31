@@ -1,0 +1,19 @@
+{
+  "name": "fredandrods-merch",
+  "version": "1.0.0",
+  "description": "Fred & Rods - South African stickers",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build needed'"
+  },
+  "keywords": [
+    "stickers",
+    "south-africa"
+  ],
+  "author": "Fred & Rods",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
