@@ -69,11 +69,12 @@ button{font:inherit;cursor:pointer}
 .btn:active{transform:scale(.97)}
 a.btn{display:inline-block;text-decoration:none}
 #signup{margin-top:0}
-#signup:not([hidden])+#links{margin-top:34px}
+#links{margin-top:34px}
+#weekly{margin-top:22px}
 .guide .tag{display:inline-block;background:var(--yellow);color:#000;font-family:var(--display);font-style:italic;font-weight:900;font-size:1rem;padding:2px 10px;border-radius:6px;margin-bottom:8px}
 .guide h2{color:var(--yellow);font-size:2.1rem;margin-bottom:6px}
 .guide p{margin:0}
-\1
+.upsell{margin-top:16px;padding-top:14px;border-top:2px dashed #555}
 /* MailerLite sign-up form, styled to match the page */
 .ml-form-embedContent p{margin:0}
 .ml-form-formContent{margin-top:14px}
@@ -104,22 +105,34 @@ a.btn{display:inline-block;text-decoration:none}
 .guide .big{font-family:var(--display);font-style:italic;font-weight:900;font-size:1.5rem;line-height:1;color:var(--yellow);margin:0 0 4px}
 
 
-.wall{display:flex;flex-wrap:wrap;gap:12px 10px}
-.pill{background:var(--ink);color:#fff;border:3px solid #fff;border-radius:14px 18px 14px 20px;padding:5px 13px 7px;box-shadow:0 0 0 2px var(--cut);font-family:var(--display);font-style:italic;font-weight:900;font-size:1.2rem;line-height:1.05}
-.pill:nth-child(3n+1){color:var(--yellow);transform:rotate(-2deg)}
-.pill:nth-child(3n+2){transform:rotate(1.5deg)}
-.pill:nth-child(3n){color:#ff5a4d;transform:rotate(-1deg)}
 
-\1.flag.mid{padding-top:0}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.weekly{background:var(--yellow);color:#000}
+.weekly .tag{display:inline-block;background:#000;color:var(--yellow);font-family:var(--display);font-style:italic;font-weight:900;font-size:1rem;padding:2px 10px;border-radius:6px;margin-bottom:8px}
+.weekly h2{color:#000;font-size:2.3rem;margin:0 0 8px}
+.weekly p{margin:0}
+.wk-list{counter-reset:n;list-style:none;margin:16px 0 18px;padding:0;display:grid;gap:10px}
+.wk-list li{counter-increment:n;display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start}
+.wk-list li::before{content:counter(n);display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#000;color:var(--yellow);font-family:var(--display);font-style:italic;font-weight:900;font-size:1.05rem;line-height:1}
+.wk-list b{display:block;font-family:var(--display);font-style:italic;font-weight:900;font-size:1.25rem;line-height:1.05}
+.wk-list span{display:block;font-size:.95rem;line-height:1.3}
+.weekly .fine{margin:10px 0 0;font-size:.9rem;opacity:.8}
+.weekly .ml-form-embedSubmit button{background:#000;color:var(--yellow)}
+.weekly .ml-form-embedSubmit button:disabled{opacity:.6}
+.weekly .ml-form-embedSubmitLoad:after{border-color:var(--yellow) var(--yellow) var(--yellow) transparent}
+.weekly .ml-form-successContent h3{color:#000}
+.flag.mid{padding-top:0}
 .merch{background:#fff;color:#111;background-image:radial-gradient(rgba(0,0,0,.07) 1px,transparent 1px);background-size:18px 18px}
 .merch-inner{max-width:560px;margin:0 auto;padding:36px 20px 48px}
 .merch-title{display:inline-block;font-size:clamp(3.4rem,17vw,5.4rem);transform:rotate(-2deg);margin:4px 0 0}
 .merch-title::after{content:"";display:block;width:80%;height:9px;background:var(--red);transform:skewX(-30deg);margin-top:10px}
 .merch-sub{margin:24px 0 14px}
-.merch-sub span{display:inline-block;background:#000;color:var(--yellow);font-family:var(--display);font-style:italic;font-weight:900;font-size:2rem;line-height:1;padding:6px 16px 9px;border:4px solid #fff;border-radius:14px 20px 14px 22px;box-shadow:0 0 0 2px var(--cut),0 8px 16px rgba(0,0,0,.22)}
+.merch-sub a{text-decoration:none;gap:12px;align-items:center;display:inline-flex;background:#000;color:var(--yellow);font-family:var(--display);font-style:italic;font-weight:900;font-size:2rem;line-height:1;padding:6px 16px 9px;border:4px solid #fff;border-radius:14px 20px 14px 22px;box-shadow:0 0 0 2px var(--cut),0 8px 16px rgba(0,0,0,.22)}
+.merch-sub a svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}
+.merch-sub a:hover{transform:translateY(-2px)}
+.merch-sub a:active{transform:scale(.97)}
 .merch-tag{font-size:1.2rem;font-weight:600;max-width:30ch;margin:0}
 .merch .sticker{box-shadow:0 0 0 2px var(--cut),0 8px 16px rgba(0,0,0,.25)}
-.merch .pill{box-shadow:0 0 0 2px var(--cut),0 4px 8px rgba(0,0,0,.2)}
 .merch a:focus-visible,.merch button:focus-visible{outline-color:#000}
 footer{max-width:560px;margin:0 auto;padding:24px 20px 36px;font-size:.95rem;opacity:.75}
 footer a{color:#fff}
@@ -140,7 +153,7 @@ footer a{color:#fff}
 
   <section id="signup">
     <div class="sticker guide">
-      <span class="tag">Free guide</span>
+      <span class="tag">Free AI video guide</span>
       <div id="mlb2-48632666" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-48632666">
         <div class="ml-form-align-center">
           <div class="ml-form-embedWrapper embedForm">
@@ -211,6 +224,53 @@ footer a{color:#fff}
       </div>
     </div>
   </section>
+  <section id="weekly" hidden aria-labelledby="weeklyTitle">
+    <div class="sticker weekly">
+      <span class="tag">Every week · Free</span>
+      <h2 id="weeklyTitle">One big question, every week.</h2>
+      <p>Questions that get people talking. Each week we explore one from every angle, then ask what you think.</p>
+      <ol class="wk-list">
+        <li><div><b>The Big Question</b><span>One compelling question worth discussing.</span></div></li>
+        <li><div><b>The Context</b><span>Interesting facts, research and background.</span></div></li>
+        <li><div><b>Both Sides</b><span>Strong arguments from different perspectives.</span></div></li>
+        <li><div><b>Think Again</b><span>Something that challenges conventional thinking.</span></div></li>
+        <li><div><b>The Discussion</b><span>Your turn: tell us what you think.</span></div></li>
+      </ol>
+      <div id="mlb2-weekly" class="ml-form-embedContainer ml-subscribe-form">
+        <div class="ml-form-align-center">
+          <div class="ml-form-embedWrapper embedForm">
+            <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+              <form id="weeklyForm" class="ml-block-form" action="" data-code="" method="post" target="_blank">
+                <div class="ml-form-formContent">
+                  <div class="ml-form-fieldRow ml-last-item">
+                    <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                      <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Email" autocomplete="email">
+                    </div>
+                  </div>
+                </div>
+                <input type="hidden" name="ml-submit" value="1">
+                <div class="ml-form-embedSubmit" style="margin-top:12px">
+                  <button type="submit" class="primary" id="weeklyBtn">JOIN FREE</button>
+                  <button disabled="disabled" style="display: none;" type="button" class="loading">
+                    <div class="ml-form-embedSubmitLoad"></div>
+                    <span class="sr-only">Loading...</span>
+                  </button>
+                </div>
+                <input type="hidden" name="anticsrf" value="true">
+              </form>
+            </div>
+            <div class="ml-form-successBody row-success" style="display: none">
+              <div class="ml-form-successContent">
+                <h3>Almost there!</h3>
+                <p>Check your inbox for a confirmation email and tap the link to join. Can’t see it? Check your spam folder.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="fine">Free. No spam. Unsubscribe in one click.</p>
+    </div>
+  </section>
   <div class="stack" id="links"></div>
 </main>
 
@@ -218,7 +278,7 @@ footer a{color:#fff}
 <div class="merch">
   <div class="merch-inner">
     <h2 class="merch-title">Merch</h2>
-    <p class="merch-sub"><span>Stickers</span></p>
+    <p class="merch-sub"><a href="stickers.html">Stickers <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
     <p class="merch-tag" id="merchTag"></p>
 
   <section id="offer" hidden>
@@ -237,11 +297,6 @@ footer a{color:#fff}
     <div class="stack" id="products"></div>
   </section>
 
-  <section>
-    <h2>Where did you stick it?</h2>
-    <p style="margin:0 0 16px;max-width:34ch">Post it on TikTok and tag <strong id="tag"></strong>. The best spots end up in our videos.</p>
-    <div class="wall" id="wall" aria-label="Some of our designs"></div>
-  </section>
   </div>
 </div>
 
@@ -260,6 +315,12 @@ const CONFIG = {
   // Discount hook. Set code to "" to hide this box. Only keep it if you will honour it!
   offer: { text: "10% off your next order", code: "" },
 
+  // The weekly email card. It switches on when both MailerLite numbers are filled in.
+  // formId = the long number in the form's address (…/forms/XXXXXXXXXXXXXXXXXX/subscribe)
+  // shortId = the number after "mlb2-" in the form's code
+  // To preview the card before it is connected, open the page with ?preview=weekly on the end of the link.
+  weekly: { formId: "", shortId: "" },
+
   // Optional cheap offer shown inside the thank-you message after sign-up. Leave title or url empty to hide it.
   thankYouOffer: { title: "", note: "", url: "" },
 
@@ -277,21 +338,6 @@ const CONFIG = {
   // { name: "Pothole Survivor pack", price: "R120", note: "10 stickers", url: "https://..." }
   products: [],
 
-  // Slogans shown in the sticker wall
-  slogans: [
-    "Please don’t hoot, I’m also confused",
-    "Avoiding potholes since 1994",
-    "Petrol is my toxic relationship",
-    "Load shedding survivor",
-    "Joburg off-road club",
-    "My other car is also financed",
-    "Kids on board, pray for me",
-    "Cold beer, warm people",
-    "Potholes beild character",
-    "4x4 anywhere South Africa",
-    "Born to roam",
-    "Cape Town is a vibe"
-  ]
 };
 /* ==================================================================== */
 
@@ -301,7 +347,6 @@ const h = (tag, cls, text) => { const e = document.createElement(tag); if (cls) 
 document.title = CONFIG.brand;
 $("brandTag").textContent = CONFIG.brandTagline;
 $("merchTag").textContent = CONFIG.tagline;
-$("tag").textContent = CONFIG.handle;
 $("foot").textContent = CONFIG.brand + " · " + CONFIG.handle;
 
 // Icons (fixed markup, not user input)
@@ -347,6 +392,26 @@ if (offer2 && offer2.title && offer2.url) {
   $("upsell").hidden = false;
 }
 
+// Weekly email card
+const wk = CONFIG.weekly || {};
+if (wk.formId && wk.shortId) {
+  const box = $("mlb2-weekly");
+  box.id = "mlb2-" + wk.shortId;
+  box.classList.add("ml-subscribe-form-" + wk.shortId);
+  $("weeklyForm").action = "https://assets.mailerlite.com/jsonp/2800811/forms/" + wk.formId + "/subscribe";
+  window["ml_webform_success_" + wk.shortId] = function () {
+    const jq = window.ml_jQuery || window.jQuery;
+    jq(".ml-subscribe-form-" + wk.shortId + " .row-success").show();
+    jq(".ml-subscribe-form-" + wk.shortId + " .row-form").hide();
+  };
+  fetch("https://assets.mailerlite.com/jsonp/2800811/forms/" + wk.formId + "/takel").catch(function () {});
+  $("weekly").hidden = false;
+} else if (new URLSearchParams(location.search).get("preview") === "weekly") {
+  $("weekly").hidden = false;
+  $("weeklyBtn").disabled = true;
+  $("weeklyBtn").textContent = "PREVIEW ONLY";
+}
+
 // Shop
 if (CONFIG.products.length) {
   $("shop").hidden = false;
@@ -359,8 +424,6 @@ if (CONFIG.products.length) {
   });
 }
 
-// Sticker wall
-CONFIG.slogans.forEach(s => $("wall").append(h("span", "pill", s)));
 </script>
 <script>
 function ml_webform_success_48632666() {
